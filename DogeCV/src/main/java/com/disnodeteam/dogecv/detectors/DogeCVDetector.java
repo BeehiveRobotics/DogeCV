@@ -36,7 +36,7 @@ public abstract class DogeCVDetector extends OpenCVPipeline{
 
     public DogeCV.DetectionSpeed speed = DogeCV.DetectionSpeed.BALANCED;
     public double downscale = 0.5;
-    public Size   downscaleResolution = new Size(640, 480);
+    public Size   downscaleResolution = new Size(1280, 720);
     public boolean useFixedDownscale = true;
     protected String detectorName = "DogeCV Detector";
 
@@ -65,15 +65,15 @@ public abstract class DogeCVDetector extends OpenCVPipeline{
     @Override
     public Mat processFrame(Mat rgba, Mat gray) {
         initSize= rgba.size();
-
+        /*
         if(useFixedDownscale){
             adjustedSize = downscaleResolution;
         }else{
             adjustedSize = new Size(initSize.width * downscale, initSize.height * downscale);
         }
-
+        */
         rgba.copyTo(workingMat);
-
+        /*
         if(workingMat.empty()){
             return rgba;
         }
@@ -81,8 +81,8 @@ public abstract class DogeCVDetector extends OpenCVPipeline{
 
         Imgproc.resize(process(workingMat),workingMat,getInitSize());
         Imgproc.putText(workingMat,"DogeCV 2018.1 " + detectorName + ": " + getAdjustedSize().toString() + " - " + speed.toString() ,new Point(5,30),0,0.5,new Scalar(0,255,255),2);
-
-        return workingMat;
+        */
+        return process(workingMat);
     }
 
     public Size getInitSize() {

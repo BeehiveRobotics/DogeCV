@@ -5,3 +5,21 @@ DogeCV/build/generated/
 DogeCV/build/
 
 openCVLibrary320/build/
+
+openCVLibrary320/bin
+
+*.class
+
+DogeCV/\.project
+
+DogeCV/bin/\.project
+
+*.iml
+
+openCVLibrary3/\.project
+
+openCVLibrary3/bin/\.project
+
+openCVLibrary3/bin/
+
+openCVLibrary3/build
