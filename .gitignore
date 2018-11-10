@@ -24,3 +24,7 @@ openCVLibrary3/bin/
 
 openCVLibrary3/build
 DogeCV/bin/
+
+DogeCV/\.classpath
+
+openCVLibrary3/\.classpath
